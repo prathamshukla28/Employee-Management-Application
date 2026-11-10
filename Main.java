@@ -12,12 +12,13 @@ public class Main {
         		+ "\n3.Update Employee"
         		+ "\n4. Delete Employee"
         		+ "\n5.View All Employee"
-        		+ "\n6. Exist ");
+        		+ "\n6. Exit ");
     }
 	 
 	public static void main(String[] args) {
-		Scanner sc=new Scanner(System.in);
 		EmployeeService service=new EmployeeService();
+		// Share one Scanner: two Scanners on System.in fight over buffered input
+		Scanner sc=service.sc;
 		
 		do {
 			menu();
