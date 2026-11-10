@@ -15,7 +15,6 @@ public class EmployeeService {
 	Employee emp4=new Employee(104, "Max", 27, "System Eng","CO",  70000);
 	
 	Scanner sc=new Scanner(System.in);
-	boolean found=false;
 	int id;
 	String name;
 	int age;
@@ -43,6 +42,7 @@ public class EmployeeService {
 		
 		System.out.println("Enter id: ");
 		id=sc.nextInt();
+		boolean found=false;
 		for(Employee emp:empset) {
 			if(emp.getId()==id) {
 				System.out.println(emp);
@@ -112,13 +112,13 @@ public class EmployeeService {
 		System.out.println("Enter Department");
 		department=sc.next();
 		System.out.println("Enter sal");
-		sc.nextDouble();
+		sal=sc.nextDouble();
 		
 		Employee emp=new Employee(id, name, age, desiganation, department, sal);
 		
 		empset.add(emp);
 		System.out.println(emp);
-		System.out.println("Employtee addeed successsfully");
+		System.out.println("Employee added successfully");
 		
 	}
 	
